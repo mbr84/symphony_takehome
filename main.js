@@ -1,1 +1,3 @@
-import Timer from './timer';
+const countdown = require('./timer');
+
+document.addEventListener('DOMContentLoaded', countdown);
