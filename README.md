@@ -11,4 +11,4 @@ We'll find out in 2017
 
 
 #BTW
-I webpack. To run, npm install, then run webpack to create bundle.js
+I webpack. Clone, npm install, and webpack to run
