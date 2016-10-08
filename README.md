@@ -11,4 +11,4 @@ We'll find out in 2017
 
 
 #BTW
-I webpacked, and I gitignored bundle.js and bundle.js.map to write in es2015. To run, npm install and webpack
+I webpack. To run, npm install, then run webpack to create bundle.js
