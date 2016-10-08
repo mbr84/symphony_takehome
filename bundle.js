@@ -91,6 +91,7 @@
 	      timer.innerHTML = timerWrapper.innerHTML
 	    } else {
 	      timer.text = "HAPPY NEW YEAR"
+	      window.clearInterval(interval)
 	    }
 	  }, 1000);
 	};
