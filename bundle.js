@@ -85,13 +85,13 @@
 	      timerWrapper.innerHTML += "<div class='colon'> : </div>";
 	
 	      const seconds = Math.floor((timeLeft / 1000) % 60);
-	      seconds.className = "seconds"
+	      seconds.className = "seconds";
 	      timerWrapper.appendChild(timerHTML(seconds, 'seconds'));
 	
-	      timer.innerHTML = timerWrapper.innerHTML
+	      timer.innerHTML = timerWrapper.innerHTML;
 	    } else {
-	      timer.text = "HAPPY NEW YEAR"
-	      window.clearInterval(interval)
+	      timer.text = "HAPPY NEW YEAR";
+	      window.clearInterval(interval);
 	    }
 	  }, 1000);
 	};
