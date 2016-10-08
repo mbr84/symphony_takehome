@@ -73,18 +73,18 @@
 	  const interval = setInterval(function () {
 	    const timerWrapper = document.createElement('div');
 	    const timer = document.getElementById('timer');
+	    const timeLeft = Date.parse('2017-1-1') - Date.parse(new Date);
 	
-	    const time = Date.parse('2017-1-1') - Date.parse(new Date);
-	    if (time > 0) {
-	      const hours = Math.floor(time / (1000 * 60 * 60));
+	    if (timeLeft > 0) {
+	      const hours = Math.floor(timeLeft / (1000 * 60 * 60));
 	      timerWrapper.appendChild(timerHTML(hours, 'hours'));
 	      timerWrapper.innerHTML += "<div class='colon'> : </div>";
 	
-	      const minutes = Math.floor((time / 1000 / 60) % 60);
+	      const minutes = Math.floor((timeLeft / 1000 / 60) % 60);
 	      timerWrapper.appendChild(timerHTML(minutes, 'minutes'));
 	      timerWrapper.innerHTML += "<div class='colon'> : </div>";
 	
-	      const seconds = Math.floor((time / 1000) % 60);
+	      const seconds = Math.floor((timeLeft / 1000) % 60);
 	      seconds.className = "seconds"
 	      timerWrapper.appendChild(timerHTML(seconds, 'seconds'));
 	
