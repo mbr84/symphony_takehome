@@ -76,15 +76,15 @@
 	
 	    const time = Date.parse('2017-1-1') - Date.parse(new Date);
 	    if (time > 0) {
-	      const hours = formatTime(Math.floor(time / (1000 * 60 * 60)));
+	      const hours = Math.floor(time / (1000 * 60 * 60));
 	      timerWrapper.appendChild(timerHTML(hours, 'hours'));
 	      timerWrapper.innerHTML += "<div class='colon'> : </div>";
 	
-	      const minutes = formatTime(Math.floor((time / 1000 / 60) % 60));
+	      const minutes = Math.floor((time / 1000 / 60) % 60);
 	      timerWrapper.appendChild(timerHTML(minutes, 'minutes'));
 	      timerWrapper.innerHTML += "<div class='colon'> : </div>";
 	
-	      const seconds = formatTime(Math.floor((time / 1000) % 60));
+	      const seconds = Math.floor((time / 1000) % 60);
 	      seconds.className = "seconds"
 	      timerWrapper.appendChild(timerHTML(seconds, 'seconds'));
 	
