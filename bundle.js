@@ -73,7 +73,7 @@
 	  const interval = setInterval(function () {
 	    const timerWrapper = document.createElement('div');
 	    const timer = document.getElementById('timer');
-	    const timeLeft = Date.parse('2017-1-1') - Date.parse(new Date);
+	    const timeLeft = Date.parse("1-1-2017") - Date.parse(new Date);
 	
 	    if (timeLeft > 0) {
 	      const hours = Math.floor(timeLeft / (1000 * 60 * 60));
@@ -85,14 +85,12 @@
 	      timerWrapper.innerHTML += "<div class='colon'> : </div>";
 	
 	      const seconds = Math.floor((timeLeft / 1000) % 60);
-	      seconds.className = "seconds";
+	      seconds.className = 'seconds';
 	      timerWrapper.appendChild(timerHTML(seconds, 'seconds'));
-	
-	      timer.innerHTML = timerWrapper.innerHTML;
 	    } else {
-	      timer.text = "HAPPY NEW YEAR";
-	      window.clearInterval(interval);
+	      timerWrapper.innerHTML = `<div class="time seconds">HAPPY NEW YEAR!</div>`;
 	    }
+	    timer.innerHTML = timerWrapper.innerHTML;
 	  }, 1000);
 	};
 	
