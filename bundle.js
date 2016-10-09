@@ -65,7 +65,6 @@
 	    <div class='unit'>${unit.toUpperCase()}</div>
 	  </div>
 	  `;
-	  if (unit === "seconds") { html.class = "unit-wrapper seconds"; }
 	  return html;
 	};
 	
